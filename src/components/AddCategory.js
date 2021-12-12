@@ -12,7 +12,7 @@ export const AddCategory = ({ setCategories }) => {
     const handleSubmit = (e) => {
         // eslint-disable-next-line no-unused-expressions
         e.preventDefault(); // Previene la recarga del navegador
-
+        
         if ( inputValue.trim().length > 2) {
             setCategories( categories => [inputValue, ...categories]);
             setInputValue('');
@@ -21,6 +21,7 @@ export const AddCategory = ({ setCategories }) => {
 
     return (
         <form onSubmit={ handleSubmit }>
+            <p>{ inputValue }</p>
             <input 
                 type="text"
                 value={ inputValue }
